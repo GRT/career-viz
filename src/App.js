@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './static/GRT-logo.png';
 import './App.css';
+import JobSearch from './components/JobSearch';
 
 class App extends Component {
   render() {
@@ -11,7 +12,7 @@ class App extends Component {
           <h2>GRT Career Visualization Tool</h2>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          <JobSearch/>
         </p>
       </div>
     );

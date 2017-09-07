@@ -4,9 +4,14 @@
   "private": true,
   "homepage": "https://grt.github.io/career-viz/",
   "dependencies": {
+    "lodash": "^4.17.4",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
+    "react-addons-update": "^15.6.0",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
     "react-scripts": "1.0.13",
+    "redux": "^3.7.2",
     "victory": "^0.21.5"
   },
   "scripts": {
@@ -15,9 +20,12 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "npm run build&&gh-pages -d build",
-    "clean":  "rm -rf node_modules/gh-pages/.cache"
+    "clean": "rm -rf node_modules/gh-pages/.cache"
   },
   "devDependencies": {
+    "eslint": "^4.6.1",
+    "eslint-plugin-react": "^7.3.0",
+    "eslint-plugin-standard": "^3.0.1",
     "gh-pages": "^1.0.0"
   }
 }
