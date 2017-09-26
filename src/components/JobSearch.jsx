@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionCreators from '../actions/ActionCreators';
@@ -47,6 +48,12 @@ class JobSearch extends Component {
             <input type="submit" value="Submit" />
           </form>
         </div>
+
+        <ul>
+          {_.map(this.props.data.jobListRes, (job, index) =>
+            <li key={index} >{job.OCC_TITLE}</li>
+          )}
+        </ul>
       </div>
     );
   }
@@ -54,7 +61,8 @@ class JobSearch extends Component {
 
 JobSearch.propTypes = {
   setJobListRes: PropTypes.func,
-  setViewState: PropTypes.func
+  setViewState: PropTypes.func,
+  data: PropTypes.object,
 };
 
 function mapStateToProps(state){
